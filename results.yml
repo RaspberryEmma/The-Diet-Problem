@@ -1,0 +1,87 @@
+# ==========================================================
+# = Solver Results                                         =
+# ==========================================================
+# ----------------------------------------------------------
+#   Problem Information
+# ----------------------------------------------------------
+Problem: 
+- Name: unknown
+  Lower bound: 30.9336005882965
+  Upper bound: 30.9336005882965
+  Number of objectives: 1
+  Number of constraints: 57
+  Number of variables: 295
+  Number of nonzeros: 1779
+  Sense: minimize
+# ----------------------------------------------------------
+#   Solver Information
+# ----------------------------------------------------------
+Solver: 
+- Status: ok
+  Termination condition: optimal
+  Statistics: 
+    Branch and bound: 
+      Number of bounded subproblems: 12353
+      Number of created subproblems: 12353
+  Error rc: 0
+  Time: 8.944098234176636
+# ----------------------------------------------------------
+#   Solution Information
+# ----------------------------------------------------------
+Solution: 
+- number of solutions: 1
+  number of solutions displayed: 1
+- Gap: 0.0
+  Status: optimal
+  Message: None
+  Objective:
+    cost:
+      Value: 30.93360058829651
+  Variable:
+    x[Friday,Ice-Cream]:
+      Value: 16
+    x[Friday,Nuts]:
+      Value: 26
+    x[Friday,Spaghetti]:
+      Value: 104
+    x[Monday,Ice-Cream]:
+      Value: 16
+    x[Monday,Nuts]:
+      Value: 26
+    x[Monday,Spaghetti]:
+      Value: 104
+    x[Saturday,Ice-Cream]:
+      Value: 16
+    x[Saturday,Nuts]:
+      Value: 26
+    x[Saturday,Spaghetti]:
+      Value: 104
+    x[Sunday,Bread-Loaves]:
+      Value: 4
+    x[Sunday,Ice-Cream]:
+      Value: 2
+    x[Sunday,Milk-Dairy]:
+      Value: 1
+    x[Sunday,Nuts]:
+      Value: 4
+    x[Sunday,Spaghetti]:
+      Value: 10
+    x[Thursday,Ice-Cream]:
+      Value: 16
+    x[Thursday,Nuts]:
+      Value: 26
+    x[Thursday,Spaghetti]:
+      Value: 104
+    x[Tuesday,Ice-Cream]:
+      Value: 16
+    x[Tuesday,Nuts]:
+      Value: 26
+    x[Tuesday,Spaghetti]:
+      Value: 104
+    x[Wednesday,Ice-Cream]:
+      Value: 16
+    x[Wednesday,Nuts]:
+      Value: 26
+    x[Wednesday,Spaghetti]:
+      Value: 104
+  Constraint: No values

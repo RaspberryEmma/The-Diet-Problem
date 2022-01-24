@@ -1,0 +1,94 @@
+# ----------------------------------------------------------
+#   Olympic Male Results
+# ----------------------------------------------------------
+Solution: 
+- number of solutions: 1
+  number of solutions displayed: 1
+- Gap: 0.0
+  Status: optimal
+  Message: None
+  Objective:
+    cost:
+      Value: 5.019949842519686
+  Variable:
+    x[Ice]:
+      Value: 16
+    x[Nuts]:
+      Value: 26
+    x[Spaghetti]:
+      Value: 104
+  Constraint: No values
+
+
+# ----------------------------------------------------------
+#   Olympic Female results
+# ----------------------------------------------------------
+Solution: 
+- number of solutions: 1
+  number of solutions displayed: 1
+- Gap: 0.0
+  Status: optimal
+  Message: None
+  Objective:
+    cost:
+      Value: 3.7805548818897643
+  Variable:
+    x[Ice]:
+      Value: 12
+    x[Nuts]:
+      Value: 22
+    x[Spaghetti]:
+      Value: 65
+  Constraint: No values
+
+
+# ----------------------------------------------------------
+#   Non-olympic Male Results
+# ----------------------------------------------------------
+Solution: 
+- number of solutions: 1
+  number of solutions displayed: 1
+- Gap: 0.0
+  Status: optimal
+  Message: None
+  Objective:
+    cost:
+      Value: 0.8139015331783969
+  Variable:
+    x[Bread-Loaves]:
+      Value: 4
+    x[Ice]:
+      Value: 2
+    x[Milk-Dairy]:
+      Value: 1
+    x[Nuts]:
+      Value: 4
+    x[Spaghetti]:
+      Value: 10
+  Constraint: No values
+
+
+# ----------------------------------------------------------
+#   Non-olympic Female Results
+# ----------------------------------------------------------
+Solution: 
+- number of solutions: 1
+  number of solutions displayed: 1
+- Gap: 0.0
+  Status: optimal
+  Message: None
+  Objective:
+    cost:
+      Value: 0.6820374803149607
+  Variable:
+    x[Bread-Loaves]:
+      Value: 6
+    x[Ice]:
+      Value: 2
+    x[Nuts]:
+      Value: 4
+    x[Spaghetti]:
+      Value: 6
+    x[Sugar]:
+      Value: 3
+  Constraint: No values

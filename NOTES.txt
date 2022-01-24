@@ -1,0 +1,13 @@
+Notes on preliminary diet:
+ - Removed butter and margarine in restricted dataset
+ - Ice = Ice Cream
+ - Bread-Loaves = / = 1 loaf of bread, it is 1 portion taken from a bread loaf
+ - Sugar = 1 teaspoon of granulated white sugar
+ - Min / Max values hotswappable
+ - Results.yml shared across solutions, individual results stored in notebook
+
+
+TBD:
+ - Implement "shopping list" constraints
+ - Extend to 1 week
+ - Make comparisons

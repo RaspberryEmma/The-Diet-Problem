@@ -1,0 +1,528 @@
+data;
+
+
+set Foods :=
+Anchovies
+Apples
+Asparagus
+Beef
+Baguettes
+Beans
+Beets
+Bread-Loaves
+Bread-Rolls
+Butter
+Cabbage
+Cauliflower
+Cereal
+Cheese
+Eggs
+Garlic
+Glucose
+Grape-Nuts
+Honey
+Ice
+Lemons
+Lettuce
+Margarine
+Nuts
+Onions
+Parsley
+Pasta
+Peaches
+Peas
+Pizza
+Potatoes
+Poultry
+Rice
+Spaghetti
+Spinach
+Strawberries
+Sugar
+Coffee
+Milk-Dairy
+Milk-Soy
+Soft-Drinks
+Water
+Whiskey
+Wine
+;
+
+
+set Nutrients :=
+Calories
+Fat
+Saturates
+Carbohydrates
+Sugar
+Protein
+Salt
+Fibre
+;
+
+
+set Days :=
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+;
+
+
+param training :=
+Monday 1
+Tuesday 1
+Wednesday 1
+Thursday 1
+Friday 1
+Saturday 1
+Sunday 1
+;
+
+
+param costs :=
+Anchovies 0.0392
+Apples 0.10800000000000001
+Asparagus 0.10815999999999999
+Beef 0.18022500000000002
+Baguettes 0.21
+Beans 0.13252380952380952
+Beets 0.08036
+Bread-Loaves 0.012870000000000001
+Bread-Rolls 0.075
+Butter 0.08235999999999999
+Cabbage 0.48805
+Cauliflower 0.31898113207547174
+Cereal 0.028
+Cheese 0.1686825
+Eggs 0.07866666666666666
+Garlic 0.22999999999999998
+Glucose 0.08900000000000001
+Grape-Nuts 0.5908620689655173
+Honey 0.0525
+Ice 0.1340787401574803
+Lemons 0.1725
+Lettuce 0.04777777777777777
+Margarine 0.02528
+Nuts 0.06520500000000001
+Onions 0.15666666666666665
+Parsley 0.07219999999999999
+Pasta 0.016443
+Peaches 0.3225
+Peas 0.08125689084895259
+Pizza 0.21337579617834396
+Potatoes 0.18081
+Poultry 0.6647333333333333
+Rice 0.15725
+Spaghetti 0.011340000000000001
+Spinach 0.11933333333333333
+Strawberries 0.40031999999999995
+Sugar 0.0026000000000000003
+Coffee 0.020849999999999997
+Milk-Dairy 0.12004405286343613
+Milk-Soy 0.1375
+Soft-Drinks 0.0425
+Water 0.02125
+Whiskey 0.693642857142857
+Wine 0.931
+;
+
+
+param amountCalories :=
+Anchovies 8.4
+Apples 95.0
+Asparagus 3.2
+Beef 78.8
+Baguettes 335.0
+Beans 265.7
+Beets 35.3
+Bread-Loaves 35.3
+Bread-Rolls 161.0
+Butter 101.8
+Cabbage 227.0
+Cauliflower 26.8
+Cereal 100.0
+Cheese 115.1
+Eggs 71.5
+Garlic 4.5
+Glucose 15.0
+Grape-Nuts 419.7
+Honey 63.8
+Ice 273.2
+Lemons 24.4
+Lettuce 5.4
+Margarine 98.7
+Nuts 163.9
+Onions 44.0
+Parsley 1.4
+Pasta 37.1
+Peaches 58.5
+Peas 103.2
+Pizza 250.0
+Potatoes 284.1
+Poultry 141.6
+Rice 684.5
+Spaghetti 105.2
+Spinach 6.9
+Strawberries 46.1
+Sugar 15.5
+Coffee 10.6
+Milk-Dairy 163.8
+Milk-Soy 85.0
+Soft-Drinks 10.0
+Water 0.0
+Whiskey 104.3
+Wine 144.8
+;
+
+
+param amountFat :=
+Anchovies 0.4
+Apples 0.3
+Asparagus 0.0
+Beef 6.4
+Baguettes 1.2
+Beans 1.0
+Beets 0.1
+Bread-Loaves 0.1
+Bread-Rolls 0.8
+Butter 11.5
+Cabbage 0.9
+Cauliflower 0.3
+Cereal 0.1
+Cheese 9.6
+Eggs 4.8
+Garlic 0.0
+Glucose 0.0
+Grape-Nuts 2.4
+Honey 0.0
+Ice 14.5
+Lemons 0.3
+Lettuce 0.1
+Margarine 8.8
+Nuts 13.8
+Onions 0.1
+Parsley 0.0
+Pasta 0.3
+Peaches 0.4
+Peas 0.5
+Pizza 7.1
+Potatoes 0.3
+Poultry 3.1
+Rice 5.4
+Spaghetti 0.4
+Spinach 0.1
+Strawberries 0.4
+Sugar 0.0
+Coffee 0.0
+Milk-Dairy 9.4
+Milk-Soy 5.3
+Soft-Drinks 0.2
+Water 0.0
+Whiskey 0.0
+Wine 0.0
+;
+
+
+param amountSaturates :=
+Anchovies 0.1
+Apples 0.1
+Asparagus 0.0
+Beef 2.6
+Baguettes 0.0
+Beans 0.3
+Beets 0.0
+Bread-Loaves 0.0
+Bread-Rolls 0.2
+Butter 7.3
+Cabbage 0.3
+Cauliflower 0.1
+Cereal 0.0
+Cheese 5.5
+Eggs 1.6
+Garlic 0.0
+Glucose 0.0
+Grape-Nuts 0.5
+Honey 0.0
+Ice 9.0
+Lemons 0.0
+Lettuce 0.0
+Margarine 0.7
+Nuts 1.8
+Onions 0.0
+Parsley 0.0
+Pasta 0.0
+Peaches 0.0
+Peas 0.1
+Pizza 3.3
+Potatoes 0.1
+Poultry 0.7
+Rice 1.1
+Spaghetti 0.1
+Spinach 0.0
+Strawberries 0.0
+Sugar 0.0
+Coffee 0.0
+Milk-Dairy 5.8
+Milk-Soy 1.0
+Soft-Drinks 0.0
+Water 0.0
+Whiskey 0.0
+Wine 0.0
+;
+
+
+param amountCarbohydrates :=
+Anchovies 0.0
+Apples 25.1
+Asparagus 0.6
+Beef 0.0
+Baguettes 68.8
+Beans 51.8
+Beets 7.8
+Bread-Loaves 7.8
+Bread-Rolls 32.4
+Butter 0.0
+Cabbage 52.7
+Cauliflower 5.3
+Cereal 23.5
+Cheese 0.4
+Eggs 0.4
+Garlic 1.0
+Glucose 0.0
+Grape-Nuts 92.6
+Honey 17.3
+Ice 31.2
+Lemons 7.8
+Lettuce 1.0
+Margarine 3.7
+Nuts 5.6
+Onions 10.3
+Parsley 0.2
+Pasta 7.1
+Peaches 14.3
+Peas 18.3
+Pizza 30.0
+Potatoes 64.5
+Poultry 0.0
+Rice 142.9
+Spaghetti 21.2
+Spinach 1.1
+Strawberries 11.1
+Sugar 4.0
+Coffee 2.3
+Milk-Dairy 11.9
+Milk-Soy 1.0
+Soft-Drinks 1.5
+Water 0.0
+Whiskey 0.0
+Wine 3.7
+;
+
+
+param amountSugar :=
+Anchovies 0.0
+Apples 18.9
+Asparagus 0.3
+Beef 0.0
+Baguettes 0.0
+Beans 19.7
+Beets 5.5
+Bread-Loaves 5.5
+Bread-Rolls 1.8
+Butter 0.0
+Cabbage 29.1
+Cauliflower 2.0
+Cereal 2.7
+Cheese 0.1
+Eggs 0.2
+Garlic 0.0
+Glucose 3.7
+Grape-Nuts 10.2
+Honey 17.2
+Ice 28.0
+Lemons 2.1
+Lettuce 0.3
+Margarine 1.7
+Nuts 0.0
+Onions 4.7
+Parsley 0.0
+Pasta 0.0
+Peaches 12.6
+Peas 6.7
+Pizza 3.6
+Potatoes 2.9
+Poultry 0.0
+Rice 1.6
+Spaghetti 0.8
+Spinach 0.1
+Strawberries 7.0
+Sugar 4.0
+Coffee 0.0
+Milk-Dairy 0.0
+Milk-Soy 0.5
+Soft-Drinks 0.0
+Water 0.0
+Whiskey 0.0
+Wine 3.7
+;
+
+
+param amountProtein :=
+Anchovies 1.2
+Apples 0.5
+Asparagus 0.4
+Beef 5.0
+Baguettes 10.0
+Beans 12.1
+Beets 1.3
+Bread-Loaves 1.3
+Bread-Rolls 6.2
+Butter 0.1
+Cabbage 11.6
+Cauliflower 2.1
+Cereal 2.1
+Cheese 6.8
+Eggs 6.3
+Garlic 0.2
+Glucose 0.0
+Grape-Nuts 12.5
+Honey 0.1
+Ice 4.6
+Lemons 0.9
+Lettuce 0.5
+Margarine 2.8
+Nuts 7.3
+Onions 1.2
+Parsley 0.1
+Pasta 1.5
+Peaches 1.4
+Peas 7.0
+Pizza 12.0
+Potatoes 7.5
+Poultry 26.6
+Rice 14.7
+Spaghetti 3.7
+Spinach 0.9
+Strawberries 1.0
+Sugar 0.0
+Coffee 0.4
+Milk-Dairy 8.4
+Milk-Soy 8.5
+Soft-Drinks 0.6
+Water 0.0
+Whiskey 0.0
+Wine 0.1
+;
+
+
+param amountSalt :=
+Anchovies 146.7
+Apples 1.8
+Asparagus 0.3
+Beef 16.7
+Baguettes 0.0
+Beans 2.5
+Beets 64
+Bread-Loaves 64
+Bread-Rolls 0.0
+Butter 91.3
+Cabbage 163.4
+Cauliflower 32.1
+Cereal 204.1
+Cheese 182.6
+Eggs 71.0
+Garlic 0.5
+Glucose 0.0
+Grape-Nuts 545.1
+Honey 0.0
+Ice 105.6
+Lemons 1.7
+Lettuce 10.1
+Margarine 53
+Nuts 122.8
+Onions 4.4
+Parsley 2.1
+Pasta 1.7
+Peaches 0.0
+Peas 144.
+Pizza 0.0
+Potatoes 22.1
+Poultry 53.1
+Rice 13.0
+Spaghetti 1.7
+Spinach 23.7
+Strawberries 1.4
+Sugar 0.0
+Coffee 1.1
+Milk-Dairy 125.4
+Milk-Soy 60
+Soft-Drinks 40
+Water 0.0
+Whiskey 0.0
+Wine 0.0
+;
+
+
+param amountFibre :=
+Anchovies 0.0
+Apples 4.4
+Asparagus 0.3
+Beef 0.0
+Baguettes 2.5
+Beans 13.9
+Beets 2.3
+Bread-Loaves 2.3
+Bread-Rolls 1.5
+Butter 0.0
+Cabbage 22.7
+Cauliflower 2.1
+Cereal 0.9
+Cheese 0.0
+Eggs 0.0
+Garlic 0.1
+Glucose 0.0
+Grape-Nuts 13.9
+Honey 0.0
+Ice 0.9
+Lemons 2.4
+Lettuce 0.5
+Margarine 0.9
+Nuts 2.5
+Onions 1.9
+Parsley 0.1
+Pasta 0.0
+Peaches 2.3
+Peas 6.0
+Pizza 2.3
+Potatoes 8.1
+Poultry 0.0
+Rice 6.5
+Spaghetti 0.9
+Spinach 0.7
+Strawberries 2.9
+Sugar 0.0
+Coffee 0.0
+Milk-Dairy 0.0
+Milk-Soy 0.0
+Soft-Drinks 0.0
+Water 0.0
+Whiskey 0.0
+Wine 0.0
+;
+
+
+param minCalories      := 15540 ;
+param minFat           := 628.51 ;
+param minSaturates     := 200.86 ;
+param minCarbohydrates := 1825.95 ;
+param minSugar         := 40.0 ;
+param minProtein       := 644.91 ;
+param minSalt          := 6.0 ;
+param minFibre         := 35.0 ;
+
+
+end;
